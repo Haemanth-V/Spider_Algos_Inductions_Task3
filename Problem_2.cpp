@@ -3,7 +3,7 @@
 using namespace std;
 
 //Logic : 0-1 Knapsack algorithm using dynamic programming
-// The subset with the value closest to sum/2 where 
+// The subset with sum of elements closest to sum/2 where 
 // sum is sum of all the elements in the input array
 // gives the minimum strength of the bricks which is 
 // the strength of the wall. So we solve this considering 
