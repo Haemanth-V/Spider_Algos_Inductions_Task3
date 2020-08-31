@@ -3,8 +3,14 @@
 using namespace std;
 
 //Logic : 0-1 Knapsack algorithm using dynamic programming
+// The subset with the value closest to sum/2 where 
+// sum is sum of all the elements in the input array
+// gives the minimum strength of the bricks which is 
+// the strength of the wall. So we solve this considering 
+// it as a 0-1 knapsack with Weight(capacity) = sum/2
+
 long long knapsack(vector<long long> brick_strength, int m, long long sum){
-	long long dp[m+1][sum/2+1];
+	long long dp[m+1][sum/2+1]; //Look up table
 	for(int i=0; i<=m; i++)
 	   dp[i][0]=0;
 	for(long long i=0; i<=sum/2; i++)
